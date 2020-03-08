@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .hidden{
+      display: none;
+  }
+
+  .results{
+      max-width: 500px;
+  }
