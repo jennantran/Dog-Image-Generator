@@ -11,13 +11,13 @@ function getDogImages(){
       .catch(error => alert('Something went wrong. Try again later.'));
 
 
-      reload();
-      
+  
 }
 
 function displayResults(responseJson) {
     console.log(responseJson);
     const el = $('.results');
+    el.empty();
     for (let i = 0; i < responseJson.message.length; i++){
         //constructing html with the current image index
         let img = `<img src="${responseJson.message[i]}" class="results-img">`;
@@ -26,7 +26,11 @@ function displayResults(responseJson) {
     }
       //display the results section
       $('.results').removeClass('hidden');
-    }
+
+   
+}
+
+   
 
 function watchForm(){
     $('form').submit(event => {
